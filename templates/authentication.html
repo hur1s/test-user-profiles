@@ -1,0 +1,9 @@
+<div>
+	<% if (authentication.expiryTime == null) { %>
+		<button id="signIn">Sign In</button>
+		<button id="register">Register</button>
+	<% } else { %>
+	<p>Logged in as: <%- details.username %> | <a href="#">View user details</a></p>
+	<button id="signOut">Sign Out</button>
+	<% } %>
+</div>

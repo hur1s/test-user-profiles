@@ -1,0 +1,11 @@
+<p class="errorPlaceholder"></p>
+<div>
+	<select>
+		<option value="null">Add title</option>
+	    <% _.each(availableTitles, function(title)  { %>
+	      <option value="<%= title.id %>"><%= title.name %></option>
+	    <% }); %>
+	</select>
+	<button class="addTitle" disabled>Add title</button>
+</div>
+<ul class="clearfix"></ul>

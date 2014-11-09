@@ -1,0 +1,330 @@
+* {
+	box-sizing: border-box;
+}
+html {
+	font-family: helvetica, verdana;
+	font-size:62.5%;
+}
+html, body {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+header, section {
+	display: block;
+	padding:10px 10px;
+}
+body {
+	margin:0;
+	background: #eeeeee;
+	overflow-x:hidden;
+}
+h1 {
+	font-size:1.8rem;
+	line-height:1.8rem;
+	margin:0;
+	background-color:#fff;
+	padding:5px;
+}
+h2 {
+	font-size:1.6rem;
+	line-height:1.8rem;
+	margin:0;
+}
+h3 {
+	font-size:1.5rem;
+	line-height:1.8rem;
+	margin:0;
+}
+label, p, input, span, button, textarea, select {
+	font-size:1.4rem;
+	line-height:1.8rem;
+	display:inline-block;
+}
+input[type="text"], input[type="password"], button, textarea, select {
+	border-radius: 3px;
+	border: solid 1px #ccc;
+	padding:2px 4px;
+}
+fieldset {
+	border: none;
+	padding:0;
+	margin:0;
+}
+fieldset legend {
+	display:none;
+}
+label {
+	width:100%;
+	margin:0 0 5px;
+}
+input[type="text"], input[type="password"], textarea {
+	width:100%;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}
+input[type=radio] {  
+    display: none;  
+} 
+textarea {
+	min-height:100px;
+	resize: none;
+}
+.radioLabel {
+    display: inline-block;  
+    cursor: pointer;  
+    position: relative;  
+    padding-left: 25px;  
+    margin-right: 15px;  
+    width: auto;
+}
+.radioLabel:before {  
+    content: "";  
+    display: inline-block;  
+    width: 16px;  
+    height: 16px;  
+    margin-right: 10px;  
+    position: absolute;  
+    left: 0;  
+    bottom: 1px;  
+    background-color: #aaa;  
+    border-radius: 8px;
+    box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);  
+}  
+input[type=radio]:checked + .radioLabel:before {  
+    content: "\2022";  
+    color: #f3f3f3;  
+    font-size: 30px;  
+    text-align: center;  
+    line-height: 18px;  
+}
+ul {
+	padding:0;
+	margin:0;
+	list-style-type: none;
+}
+input[disabled] {
+	background-color: #eee;
+}
+.inputGroup {
+	margin-bottom:5px;
+}
+.error input {
+	border: solid 1px red;
+}
+.error, .error label {
+	color: red;
+}
+.feedback {
+	color: green;
+}
+
+.pullLeft {
+	float:left;
+}
+.pullRight {
+	float:right;
+}
+.alignRight {
+	text-align:right;
+}
+
+.clearfix {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.page {
+	display:none;
+}
+.active {
+	display:block;
+}
+
+header {
+	position:absolute;
+	height:50px;
+	top:0;
+	left:0;
+	width:100%;
+	z-index:1;
+}
+header p {
+	margin:0;
+}
+#bodyContainer {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+#body {
+	position:absolute;
+	top:50px;
+	bottom:5px;
+	left:0;
+	width:100%;
+	overflow-x: hidden;
+	background-color:#ffffff;
+}
+#menu {
+	position:absolute;
+	top:0;
+	left:100%;
+	width:100%;
+	height:100%;
+	overflow-x: hidden;
+	padding:50px 2% 5px;
+	z-index:1;
+	-webkit-transform: translate3d(0, 0, 0);
+	transition: all 0.5s ease;
+}
+footer {
+	position:absolute;
+	height:5px;
+	bottom:0;
+	left:0;
+	width:100%;
+}
+
+#menu.active {
+	left:0;
+}
+.overlay {
+	position:absolute;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	background-color: #000;
+	opacity: 0.25;
+}
+
+#signInPage,
+#registerPage {
+	display:none;
+}
+#menu .menuContainer {
+	position: absolute;
+	top: 0;
+	right:0;
+	width:100%;
+	height:100%;
+	background-color:#333;
+	color:#fff;
+	padding:60px 10px 10px;
+}
+.gameTitles li {
+	float:left;
+	width:100%;
+	height:100px;
+	text-align:center;
+	padding:5px;
+}
+.gameTitles li span {
+	border: solid 2px #ccc;
+	border-radius: 5px;
+	display:block;
+	height:100%;
+}
+
+#titlesContainer ul {
+	margin:10px 0;
+	border: solid 1px #ddd;
+	border-radius: 5px;
+	display:block;
+	padding:5px;
+}
+#titlesContainer ul li {
+	border-top:solid 1px #eee;
+	display:block;
+}
+#titlesContainer ul li:first-child {
+	border-top:none;
+}
+#titlesContainer ul li div {
+	width:100%;
+	padding:5px 30px 5px 0;
+	position:relative;
+	line-height:2.4rem;
+}
+#titlesContainer ul li div button {
+	position:absolute;
+	top:5px;
+	right:0;
+}
+
+@media only screen and (min-width: 500px) {
+	#menu  .menuContainer {
+		width:250px;
+	}
+	.gameTitles li {
+		width:50%;
+	}
+}
+@media only screen and (min-width: 900px) {
+	#menu  .menuContainer {
+		width:400px;
+	}
+	.gameTitles li {
+		width:25%;
+	}
+}
+/*html, body {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.wrap {
+	height:100%;
+	width: 100%;
+	position:relative;
+}
+header {
+	position:absolute;
+	height:50px;
+	top:0;
+	left:0;
+	width:100%;
+	border-bottom: solid 1px #eee;
+}
+#body {
+	position:absolute;
+	top:50px;
+	bottom:50px;
+	width:100%;
+	overflow-y: auto;
+	padding:2%;
+}
+footer {
+	position:absolute;
+	height:50px;
+	bottom:0;
+	left:0;
+	width:100%;
+	border-top: solid 1px #eee;
+}
+.page {
+	display:none;
+}
+.active {
+	display:block;
+}
+.row {
+	width:80%;
+	margin:0 auto;
+}
+form div {
+	margin:5px 0;
+}
+.error input {
+	border: solid 1px red;
+}
+.error span {
+	color: red;
+}*/

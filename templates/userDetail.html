@@ -1,0 +1,46 @@
+<div>
+	<h2>User Detail</h2>
+	<form>
+		<p class="errorPlaceholder"></p>
+		<div class="inputGroup">
+			<label for="userId">User id:</label><input type="text" id="userId" name="userId" disabled value="<%- userId %>"/>
+		</div>
+		<div class="inputGroup">
+			<label for="firstName">First name:</label><input type="text" id="firstName" name="firstName" value="<%- firstName %>"/>
+		</div>
+		<div class="inputGroup">
+			<label for="lastName">Last name:</label><input type="text" id="lastName" name="lastName" value="<%- lastName %>"/>
+		</div>
+		<div class="inputGroup">
+			<label for="username">Username:</label><input type="text" id="username" name="username" value="<%- username %>"/>
+		</div>
+		<div class="inputGroup">
+			<label for="password">Password:</label><input type="password" id="password" name="password" value="<%- password %>"/>
+		</div>
+		<div class="inputGroup">
+			<label for="phoneNumber">Phone number:</label><input type="text" id="phoneNumber" name="phoneNumber" value="<%- phoneNumber %>"/>
+		</div>
+		<div class="inputGroup">
+			<label for="age">Age:</label><input type="text" id="age" name="age" value="<%- age %>"/>
+		</div>
+		<div class="inputGroup">
+			<fieldset>
+				<legend>Gender</legend>
+				<input id="male" type="radio" name="genderIsFemale" value="false" <% genderIsFemale == false ? print("checked") :'' %> >
+				<label for="male" class="radioLabel">Male</label>
+				<input id="female" type="radio" name="genderIsFemale" value="true" <% genderIsFemale == true ? print("checked") :'' %> >
+				<label for="female" class="radioLabel">Female</label>
+			</fieldset>
+		</div>
+		<div class="inputGroup">
+			<label for="notes">Notes:</label><textarea id="notes" name="notes"><%- notes %></textarea>
+		</div>
+		<div class="inputGroup alignRight">
+			<button class="updateDetails">Update</button>
+		</div>
+		<div class="inputGroup">
+			<h3>Titles</h3>
+			<div id="titlesContainer"></div>
+			</div>
+	</form>
+</div>
